@@ -1,0 +1,283 @@
+/* imported fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+/* removing and modifying bootstrap defaults */
+
+input:focus,
+button:focus {
+  box-shadow: none !important;
+}
+
+/* general styling */
+
+:root {
+  --main-text: white;
+  --primary-color: rgb(92, 186, 95);
+  --primary-color-hover: rgb(56, 142, 59);
+  --black: black;
+  --offcanvas-width: 270px;
+  --offcanvas-height: 30px;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.border-top-3px {
+  border-top: 3px solid var(--primary-color-hover) !important;
+}
+
+/* background and colors */
+
+.border-main-content {
+  border: 3px solid var(--primary-color);
+}
+
+.btn-bg-main {
+  background-color: var(--primary-color);
+  color: var(--main-text);
+}
+
+.btn-bg-main-hover:hover {
+  background-color: var(--primary-color-hover);
+  color: var(--main-text);
+}
+
+.navbar {
+  background-color: var(--primary-color-hover);
+  color: var(--main-text);
+}
+
+/* .dropdown-menu {
+  margin-top: 0.6rem !important;
+  border-radius: 0 !important;
+  padding: 0 !important ;
+} */
+
+/* shadows */
+
+.box-shadow-1 {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-color-hover);
+}
+
+/* height and width */
+
+.w-5r {
+  width: 5rem;
+}
+
+.h-2r {
+  height: 2rem;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.mx-35vh {
+  height: 35vh !important;
+}
+
+.mx-30vh {
+  height: 30vh !important;
+}
+
+.mx-72vh {
+  height: 72vh !important;
+}
+
+.mx-80vh {
+  height: 80vh !important;
+}
+
+.mw-10r {
+  min-width: 10rem !important;
+}
+
+.mw-25r {
+  min-width: 25rem !important;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.text-color {
+  color: var(--primary-color);
+}
+
+/* cursors */
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* offcanvas styling */
+
+.main-text {
+  color: var(--main-text) !important;
+}
+
+.main-text-hover:hover {
+  border-left: 3px solid var(--primary-color);
+  color: var(--main-text) !important;
+  padding-left: 10px;
+}
+
+.offcanvas {
+  background-color: var(--primary-color-hover);
+}
+
+.offcanvas-main-item {
+  border-bottom: 1px solid transparent;
+}
+
+.offcanvas-main-item:hover {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+p::before {
+  content: "*";
+  color: red;
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+body {
+  position: relative;
+}
+
+.banner {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-30%, 15%);
+  overflow: hidden;
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 6%;
+}
+
+.date {
+  height: 20vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+@media (max-width: 976px) {
+  .banner {
+    height: 20rem;
+    width: 20rem;
+    transform: translate(-15%, 70%);
+  }
+}
+
+@media print {
+  .hidden-print {
+    display: none !important;
+  }
+
+  .border-top-3px {
+    border-top: none !important;
+  }
+
+  .box-shadow-1 {
+    box-shadow: none !important;
+  }
+
+  .text-color {
+    font-family: "Times New Roman", Times, serif !important;
+  }
+
+  .show {
+    display: none !important;
+  }
+
+  .hidden {
+    display: block !important;
+  }
+
+  .text-color,
+  .text-muted {
+    color: var(--black) !important;
+  }
+
+  .h-2r {
+    height: 4rem !important;
+    width: 4rem !important;
+  }
+
+  .dataTables_length,
+  .dataTables_filter,
+  .dataTables_info,
+  .dataTables_paginate {
+    display: none !important;
+  }
+
+  .overflow-auto {
+    overflow: hidden !important;
+  }
+
+  @page {
+    size: 3in 2in !important;
+    size: portrait !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar,
+  #main-container {
+    margin-left: var(--offcanvas-width);
+  }
+  .offcanvas {
+    visibility: visible;
+    transform: none !important;
+    height: 100%;
+    width: var(--offcanvas-width) !important;
+    -webkit-transform: none;
+    top: 0;
+  }
+  .offcanvas-btn-close {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 20rem;
+    width: 20rem;
+    transform: translate(-50%, 70%);
+  }
+}
+
+@media (max-width: 363px) {
+  .banner {
+    height: 15rem;
+    width: 15rem;
+    transform: translate(-50%, 80%);
+  }
+}
